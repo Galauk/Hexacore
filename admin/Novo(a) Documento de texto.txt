@@ -1,0 +1,23 @@
+admin
+-id
+-nome
+-login
+-senha
+-nivel
+
+log
+-id
+-admin
+-data
+-hora
+
+
+
+del
+-id
+-admin
+-tabela
+-info(depois do ID)
+-data
+-hora
+

@@ -1,0 +1,73 @@
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+			Administrador
+			     BY
+			   Angelo
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+			Versão 2.1 - 2.5
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+[X] - Testar busca (Associados)
+
+[X] - Permição de Usuarios
+
+[X] - Log de Acesso
+
+[X] - Log de Deletar
+
+[X] - Verificar o Administrador no Internet Explorer
+
+[X] - Opção "Ativo"
+
+[X] - Remoção dos "While" por "For"
+
+[X] - Arquivo que cria as tabelas necessarias no Banco de Dados
+
+- Removido bug encontrado na busca de variaveis associadas
+
+- Adicionado restrições ao acesso de menu de acordo com o nivel do Usuario
+
+- Adicionado registro de usuario ao se logar no sistema
+
+- Adicionado registro de quais registros foram deletados e por qual usuario
+
+- Ajustado o Bug causado pelo Internet Explorer na visualização das paginas
+
+- Adicionado tipo "opção" permitindo cadastro de respostas boleanas
+
+- Adicionada variavel de controle de ciclo de informações para ciclo limitado de informações existentes
+
+- Adcionado o arquivo "instala.php" que é responsavel pela criação de tabelas ainda não criadas
+
+[ ] - Imagem (Tamanhos x y)
+
+[ ] - Imagem (Marca Dágua)
+
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+			Versão 2.0 - 2.1
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+- Adicionado Opção de Busca com filtro
+
+- Ordem na leitura apenas clicando no titulo de cada coluna
+
+- busca permanece mesmo com mudança de pagina
+
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+			Versão 1.0 - 2.0
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+- Adicionado nova pele para o Administrador
+
+- Adcionado controlador do menu
