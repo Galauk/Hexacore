@@ -5,13 +5,14 @@ define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', "hexacore.com.br/admin");
 
 require 'core'.DS.'AutoLoad.php';
+require 'core'.DS.'Controller.php';
 
-$AutoLoad = new AutoLoad();
+/*$AutoLoad = new AutoLoad();
 
 spl_autoload_register(array($AutoLoad, 'core'));
 
 use Controller as Controller;
-
+*/
 $controller = new Controller();
 
 if (!empty($_GET['action'])){
