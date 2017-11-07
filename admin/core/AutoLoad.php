@@ -13,7 +13,7 @@ class AutoLoad{
 		}
 		$fileName .= str_replace('_', DS, $className) . '.php';
 		//echo ROOT.DS.'core'.DS.$fileName;
-		require DS.$fileName;
+		require $fileName;
 	}
 
 }
