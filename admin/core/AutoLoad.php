@@ -12,8 +12,8 @@ class AutoLoad{
 			$fileName  = str_replace(rtrim('\ '), DS, $namespace) . DS;
 		}
 		$fileName .= str_replace('_', DS, $className) . '.php';
-		echo ROOT.DS.'core'.DS.$fileName;
-		//require ROOT.DS.'core'.DS.$fileName;
+		//echo ROOT.DS.'core'.DS.$fileName;
+		require ROOT.DS.'core'.DS.$fileName;
 	}
 
 }
