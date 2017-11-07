@@ -12,9 +12,9 @@ spl_autoload_register(array($AutoLoad, 'core'));
 
 use Controller as Controller;
 
-/*
 $controller = new Controller();
 
+/*
 if (!empty($_GET['action'])){
 	$controller->{$_GET['action']}();
 }
