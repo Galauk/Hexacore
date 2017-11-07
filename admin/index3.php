@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 
 define('DS', DIRECTORY_SEPARATOR);
-define('ROOT', "./");
+define('ROOT', "hexacore.com.br/admin");
 
 require 'core'.DS.'AutoLoad.php';
 
@@ -17,4 +17,5 @@ $controller = new Controller();
 if (!empty($_GET['action'])){
 	$controller->{$_GET['action']}();
 }
+
 ?>
