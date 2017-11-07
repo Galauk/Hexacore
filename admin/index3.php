@@ -10,7 +10,7 @@ $AutoLoad = new AutoLoad();
 
 spl_autoload_register(array($AutoLoad, 'core'));
 
-use Controller as Controller;
+use HexacoreController as Controller;
 
 $controller = new Controller();
 
