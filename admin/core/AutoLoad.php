@@ -3,13 +3,13 @@
 class AutoLoad{
 
 	function core($className){
-		$className = ltrim($className, '\' );
+		$className = ltrim($className, rtrim('\ '));
 		$fileName  = '';
 		$namespace = '';
-		if ($lastNsPos = strrpos($className, '\')) {
+		if ($lastNsPos = strrpos($className, rtrim('\ '))) {
 			$namespace = substr($className, 0, $lastNsPos);
 			$className = substr($className, $lastNsPos + 1);
-			$fileName  = str_replace('\', DS, $namespace) . DS;
+			$fileName  = str_replace(rtrim('\ '), DS, $namespace) . DS;
 		}
 		$fileName .= str_replace('_', DS, $className) . '.php';
 		require ROOT.DS.'core'.DS.$fileName;
