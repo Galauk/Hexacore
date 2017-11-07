@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 
 define('DS', DIRECTORY_SEPARATOR);
-define('ROOT', "hexacore.com.br/admin");
+define('ROOT', "./");
 
 require 'core'.DS.'AutoLoad.php';
 
