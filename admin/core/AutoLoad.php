@@ -12,7 +12,7 @@ class AutoLoad{
 			$fileName  = str_replace(' \ ', DS, $namespace) . DS;
 		}
 		$fileName .= str_replace('_', DS, $className) . '.php';
-		require ROOT.DS.'Library'.DS.$fileName;
+		require ROOT.DS.$fileName;
 	}
 
 }
