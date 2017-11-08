@@ -1,4 +1,6 @@
 <?php
+require 'Model.php';
+require 'View.php';
 
 class Controller{
 	protected $model;

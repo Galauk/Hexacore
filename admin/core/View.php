@@ -1,6 +1,6 @@
 <?php
 
-namespace Hexacore;
+require 'Model.php';
 
 class View{
 	private $model;
