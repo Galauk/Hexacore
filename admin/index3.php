@@ -6,9 +6,9 @@ define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', "hexacore.com.br/admin");
 require 'core'.DS.'AutoLoad.php';
 */
-require 'core/Model.php';
-require 'core/View.php';
-require 'core/Controller.php';
+require_once 'core/Model.php';
+require_once 'core/View.php';
+require_once 'core/Controller.php';
 
 /*$AutoLoad = new AutoLoad();
 
