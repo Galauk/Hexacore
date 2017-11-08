@@ -1,7 +1,5 @@
 <?php
 
-namespace Hexacore;
-
 class Controller{
 	protected $model;
 	protected $view;
