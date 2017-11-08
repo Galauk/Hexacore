@@ -1,7 +1,5 @@
 <?php
 
-namespace Hexacore;
-
 class Model{
 	public $string;
 
