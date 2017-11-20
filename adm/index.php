@@ -7,8 +7,8 @@
 		$senha = $_POST[senha];
 	
 		$s = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$senha'";
-		$q = mysql_query($s);
-		$n = @mysql_num_rows($q);
+		$q = mysqli_query($s);
+		$n = @mysqli_num_rows($q);
 		
 		if($n > 0):
 			session_start();
