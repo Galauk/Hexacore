@@ -1,14 +1,15 @@
 <?php
-class DBASE extends PDO{
+class DBASE extends PDO {
+    public $host = "mysql785.umbler.com";
+    public $user = "hexacore";
+    public $password = "FK8{rGXzVG";
+    public $dbname = "hexacore_site";
+    public $dns = "mysql:dbname=". $this->dbname .";host=". $this->host;
+
     public $conn = null;
     public function __construct(){
-        $host = "mysql785.umbler.com";
-        $user = "hexacore";
-        $password = "FK8{rGXzVG";
-        $dbname = "hexacore_site";
-        $dsn = "mysql:dbname=".$dbname.";host=".$host;
         try{
-            $conn = new PDO($dns, $user, $password);
+            $conn = new PDO($this->dns, $this->user, $this->password);
         }catch(PDOException $e){
             echo "Falha na conexao:".$e->getMessage();
         }
