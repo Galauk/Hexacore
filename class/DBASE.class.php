@@ -21,7 +21,7 @@ class DBASE{
             $e->getMessage();
         }
         $pdo = $this->conn;
-        var_dump($pdo);
+        var_dump($this->conn);
         die();
         $select = $pdo->query($sql);
         return $select;
