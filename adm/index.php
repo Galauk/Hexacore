@@ -39,7 +39,7 @@
 		if($msg){
 			$body->add("
 			<tr>
-				<td align='center' class='erro' colspan='30'><?=$msg?></td>
+				<td align='center' class='erro' colspan='30'>".$msg."</td>
 			</tr>
 			");
 		}
