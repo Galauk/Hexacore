@@ -21,13 +21,13 @@ class DBASE extends PDO {
     }
 
     public function query($sql){
-        return $this->conn->query($sql);
+        $res = $this->conn->prepare($sql);
+        return $res->execute();
     }
 
     public function auth($login, $password){
-        $res = $this->conn->query("SELECT login, senha FROM admin WHERE login LIKE '".$login."' AND senha LIKE '".$password."'");
-        die(var_dump($res));
-//        $n = $res->fetchColumn();
+        $res = $this->query("SELECT login, senha FROM admin WHERE login LIKE '".$login."' AND senha LIKE '".$password."'");
+        $n = $res->rowCount();
         if($n > 0){
             return true;
         }else{
