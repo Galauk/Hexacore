@@ -14,13 +14,13 @@ class DBASE{
         $this->dsn = 'mysql:dbname='.$this->database.';host='.$this->host;
         try{
             $this->conn = new PDO($this->dns, $this->user, $this->password);
+            var_dump($this->conn);
         }catch(PDOException $e){
             $e->getMessage();
         }
     }
 
     private function query($sql){
-        var_dump($this->conn);
         $pdo = $this->conn;
         $select = $pdo->query($sql);
         return $select;
