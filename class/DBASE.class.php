@@ -11,7 +11,7 @@ class DBASE{
         $this->user = "hexacore_my";
         $this->password = "FK8{rGXzVG";
         $this->database = "hexacore_my";
-        $this->dsn = 'mysql:dbname='.$this->database.';host='.$this->host;
+        $this->dsn = "mysql:dbname=".$this->database.";host=".$this->host;
         try{
             $this->conn = new PDO($this->dns, $this->user, $this->password);
         }catch(PDOException $e){
@@ -20,10 +20,7 @@ class DBASE{
     }
 
     public function query($sql){
-        var_dump($sql);
-        $query = $this->conn->prepare($sql);
-        die($query);
-        return $query->execute();
+        return $this->conn->query($sql);
     }
 
     public function auth($login, $password){
