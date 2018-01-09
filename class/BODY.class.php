@@ -67,7 +67,7 @@ class BODY {
 		$x .= ">";
 		$x .= $content;
 		$x .= "</div>";
-		return $x;
+		$this->body .= $x;
 	}
 	function openDiv($atrib=null){
 		$x = "<div";
@@ -79,11 +79,11 @@ class BODY {
 			}
 		}
 		$x .= ">";
-		return $x;
+		$this->body .= $x;
 	}
 	function closeDiv(){
 		$x = "</div>";
-		return $x;
+		$this->body .= $x;
 	}
 	function label($content,$atrib=null){
 		$x = "<label";
@@ -97,7 +97,7 @@ class BODY {
 		$x .= ">";
 		$x .= $content;
 		$x .= "</label>";
-		return $x;
+		$this->body .= $x;
 	}
 	function form($content,$action="",$method="post",$enctype="multipart/form-data",$atrib=null){
 		$x = "<form";
@@ -114,7 +114,7 @@ class BODY {
 		$x .= ">";
 		$x .= $content;
 		$x .= "</form>";
-		return $x;
+		$this->body .= $x;
 	}
 	function openForm($action="",$method="post",$enctype="multipart/form-data",$atrib=null){
 		$x = "<form";
@@ -129,11 +129,11 @@ class BODY {
 			}
 		}
 		$x .= ">";
-		return $x;
+		$this->body .= $x;
 	}
 	function closeForm(){
 		$x = "</form>";
-		return $x;
+		$this->body .= $x;
 	}
 	function linha($atrib=null){
 		$x = "<hr";
@@ -145,7 +145,7 @@ class BODY {
 			}
 		}
 		$x.= ">";
-		return $x;
+		$this->body .= $x;
 	}
 	function listaMenu($array,$atrib=null){
 		$x = "<ul";
@@ -164,7 +164,7 @@ class BODY {
 		}
 
 		$x .= "</ul>";
-		return $x;
+		$this->body .= $x;
 	}
 	function listaItem($array){
 		$x = "<ul";
@@ -177,7 +177,7 @@ class BODY {
 			$x .= "</li>";
 		}
 		$x .= "</ul>";
-		return $x;
+		$this->body .= $x;
 	}
 	function listaTabela($array){
 		$x = "<ul";
@@ -197,7 +197,7 @@ class BODY {
 		}
 
 		$x .= "</ul>";
-		return $x;
+		$this->body .= $x;
 	}
 
 	function input($type,$array2=null){
@@ -211,7 +211,7 @@ class BODY {
 			}
 		}
 		$x .= ">";
-		return $x;
+		$this->body .= $x;
 	}
 	function select($array,$atrib=null){
 		$x = "<select";
@@ -227,7 +227,7 @@ class BODY {
 			$x .= "<option value=".$key.">".$value."</option>";
 		}
 		$x .= "</select>";
-		return $x;
+		$this->body .= $x;
 	}
 	function textarea($content='',$atrib=null){
 		$x = "<textarea";
@@ -241,7 +241,7 @@ class BODY {
 		$x .= ">";
 		$x .= $content;
 		$x .= "</textarea>";
-		return $x;
+		$this->body .= $x;
 	}
 	function img($src,$atrib=null){
 		$x = "<img";
@@ -253,7 +253,7 @@ class BODY {
 			}
 		}
 		$x .= " src='".$src."'>";
-		return $x;
+		$this->body .= $x;
 	}
 	function link($content,$href="#",$atrib=null){
 		$x = "<a";
@@ -268,11 +268,11 @@ class BODY {
 		$x .= ">";
 		$x .= $content;
 		$x .= "</a>";
-		return $x;
+		$this->body .= $x;
 	}
 	function quebra(){
 		$x = "<br>";
-		return $x;
+		$this->body .= $x;
 	}
 }
 ?>

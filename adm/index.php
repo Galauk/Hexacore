@@ -1,25 +1,28 @@
-<?
+<?php
 	include_once "conecte.php";
-	
+
+	require_once "../lib.php";
+	$body = new BODY();
+	$db = new DBASE();
+
 	$env = $_POST[env];
-	if($env):
+	if($env){
 		$login = $_POST[login];
 		$senha = $_POST[senha];
-	
-		$s = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$senha'";
-		$q = mysqli_query($s);
-		$n = @mysqli_num_rows($q);
 		
-		if($n > 0):
+		if($db->auth($login,$senha)){
 			session_start();
 			$_SESSION[auten] = "1";
 			header('location:body.php');
-		else:
+		}else{
 			header('location:index.php?msg=Acesso Negado');
-		endif;		
-	else:
+		}
+	}else{
+
 		include_once "start.php";
 		$msg = $_GET[msg];
+
+	$body->openDiv();
 ?>
 <div align='center'>
 <br>
@@ -52,6 +55,8 @@
 		</table>
 	</form>
 </div>
-<?
-	endif;
+<?php
+		$body->closeDiv();
+		$body->show();
+	}
 ?>
