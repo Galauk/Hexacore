@@ -20,7 +20,8 @@ class DBASE{
     }
 
     public function query($sql){
-        return $this->conn->query($sql);
+        $query = $this->conn->prepare($sql);
+        return $query->execute();
     }
 
     public function auth($login, $password){
