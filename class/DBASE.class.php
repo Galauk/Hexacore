@@ -1,10 +1,10 @@
 <?php
 class DBASE{
-    private $host;
-    private $user;
-    private $password;
-    private $database;
-    private $dns;
+    public $host;
+    public $user;
+    public $password;
+    public $database;
+    public $dns;
     public $conn;
     public function __construct(){
         $this->host = "mysql857.umbler.com";
@@ -12,18 +12,15 @@ class DBASE{
         $this->password = "FK8{rGXzVG";
         $this->database = "hexacore_my";
         $this->dsn = 'mysql:dbname='.$this->database.';host='.$this->host;
-    }
-
-    private function query($sql){
         try{
-            $this->conn = new PDO($this->dns,$this->user,$this->password);
-            var_dump($this->conn);
-            echo "passou";
+            $this->conn = new PDO($this->dns, $this->user, $this->password);
         }catch(PDOException $e){
             $e->getMessage();
         }
+    }
+
+    private function query($sql){
         $pdo = $this->conn;
-        die();
         $select = $pdo->query($sql);
         return $select;
     }
