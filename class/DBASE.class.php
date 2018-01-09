@@ -20,6 +20,12 @@ class DBASE extends PDO {
         try{
             $this->conn = new PDO($this->dial, $this->user, $this->password);
             $res = $this->conn->query($sql);
+
+            echo "<!--";
+            var_dump($res);
+            echo "-->";
+            die();
+
         }catch(PDOException $e){
             echo "Falha na conexao:".$e->getMessage();
         }
@@ -28,10 +34,6 @@ class DBASE extends PDO {
 
     public function auth($login, $password){
         $stmt = $this->query("SELECT * FROM admin WHERE login LIKE '".$login."' AND senha LIKE '".$password."'");
-        echo "<!--";
-        var_dump($stmt);
-        echo "-->";
-        die();
         $n = $stmt->rowCount();
         if($n > 0){
             return true;
