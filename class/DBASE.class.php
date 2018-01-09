@@ -1,5 +1,5 @@
 <?php
-class DBASE extends PDO{
+class DBASE{
     public $host;
     public $user;
     public $password;
@@ -20,8 +20,7 @@ class DBASE extends PDO{
     }
 
     public function query($sql){
-        $select = $this->conn->query($sql);
-        return $select;
+        return $this->conn->query($sql);
     }
 
     public function auth($login, $password){
