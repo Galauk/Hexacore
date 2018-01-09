@@ -17,11 +17,12 @@ class DBASE{
     private function query($sql){
         try{
             $this->conn = new PDO($this->dns,$this->user,$this->password);
+            var_dump($this->conn);
+            echo "passou";
         }catch(PDOException $e){
             $e->getMessage();
         }
         $pdo = $this->conn;
-        var_dump($this->conn);
         die();
         $select = $pdo->query($sql);
         return $select;
