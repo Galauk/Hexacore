@@ -12,15 +12,15 @@ class DBASE{
         $this->password = "FK8{rGXzVG";
         $this->database = "hexacore_my";
         $this->dsn = 'mysql:dbname='.$this->database.';host='.$this->host;
+    }
+
+    private function query($sql){
         try{
             $this->conn = new PDO($this->dns,$this->user,$this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }catch(Exception $e){
             $e->getMessage();
         }
-    }
-
-    private function query($sql){
         $pdo = $this->conn;
         var_dump($pdo);
         die();
