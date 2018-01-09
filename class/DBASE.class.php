@@ -21,7 +21,7 @@ class DBASE extends PDO {
             $conn = new PDO($this->dial, $this->user, $this->password);
             $res = $conn->query($sql);
 
-            var_dump($res);
+            var_dump($conn);
             die();
 
         }catch(PDOException $e){
