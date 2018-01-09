@@ -22,7 +22,8 @@
 		include_once "start.php";
 		$msg = $_GET[msg];
 
-	$body->openDiv();
+		$body->openDiv();
+		$body->add(
 ?>
 <div align='center'>
 <br>
@@ -56,6 +57,7 @@
 	</form>
 </div>
 <?php
+		);
 		$body->closeDiv();
 		$body->show();
 	}
