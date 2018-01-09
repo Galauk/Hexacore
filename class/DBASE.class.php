@@ -10,7 +10,7 @@ class DBASE{
         try{
             $this->conn = new PDO($dns, $user, $password);
         }catch(PDOException $e){
-            echo $e->getMessage();
+            echo "Falha na conexao:".$e->getMessage();
         }
     }
 
