@@ -8,7 +8,7 @@ class DBASE{
         $dbname = "hexacore_site";
         $dsn = "mysql:dbname=".$dbname.";host=".$host;
         try{
-            $this->conn = new PDO($dns, $user, $password);
+            $conn = new PDO($dns, $user, $password);
         }catch(PDOException $e){
             echo "Falha na conexao:".$e->getMessage();
         }
