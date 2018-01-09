@@ -19,9 +19,16 @@ class DBASE{
             $e->getMessage();
         }
     }
+
+    private function query($sql){
+        $pdo = $this->conn;
+        $select = $pdo->query($sql);
+        return $select;
+    }
+
     public function auth($login,$password){
         $sql = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'";
-        $select = $this->conn->query($sql);
+        $select = $this->query($sql);
         die(var_dump($select));
 		$n = $select->rowCount();
 
