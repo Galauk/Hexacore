@@ -9,7 +9,8 @@
 	if($env){
 		$login = $_POST[login];
 		$senha = $_POST[senha];
-		
+		var_dump($db->auth($login,$senha));
+		/*
 		if($db->auth($login,$senha)){
 			session_start();
 			$_SESSION[auten] = "1";
@@ -17,6 +18,7 @@
 		}else{
 			header('location:index.php?msg=Acesso Negado');
 		}
+		*/
 	}else{
 
 		include_once "start.php";
