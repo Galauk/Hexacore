@@ -1,5 +1,5 @@
 <?php
-class HTML {
+class BODY {
 	public $head;
 	public $body = null;
 	function show(){
