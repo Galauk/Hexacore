@@ -25,8 +25,7 @@ class DBASE extends PDO{
     }
 
     public function auth($login, $password){
-        $sql = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'";
-        $select = $this->query($sql);
+        $select = $this->query("SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'");
 		$n = $select->rowCount();
 
         if($n > 0){
