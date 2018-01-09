@@ -29,7 +29,7 @@ class DBASE extends PDO {
         $stmt = $this->conn->query("SELECT * FROM admin WHERE login LIKE '".$login."' AND senha LIKE '".$password."'");
         $n = $stmt->rowCount();
         echo "<!--";
-        var_dump($stmt->rowCount());
+        var_dump($stmt);
         echo "-->";
         die();
         if($n > 0){
