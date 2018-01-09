@@ -14,10 +14,7 @@ class HTML {
 			$this->body = null;
 		}
 	}
-	function add($content){
-		$this->body .= $content;
-	}
-	private function append($content,$type=null){
+	public function add($content,$type="body"){
 		if($type == "head"){
 			$this->head .= $content;
 		}
@@ -29,34 +26,34 @@ class HTML {
 		$x = "<title>";
 		$x .= $titulo;
 		$x .= "</title>";
-		$this->append($x,"head");
+		$this->add($x,"head");
 	}
 	function java($script=""){
 		$x = "<script>";
 		$x .= $script;
 		$x .= "</script>";
-		$this->append($x,"head");
+		$this->add($x,"head");
 	}
 	function css($style=""){
 		$x = "<style>";
 		$x .= $style;
 		$x .= "</style>";
-		$this->append($x,"head");
+		$this->add($x,"head");
 	}
 	function loadJava($file=null){
 		$x = "<script src='".$file."'>";
 		$x .= "</script>";
-		$this->append($x,"head");
+		$this->add($x,"head");
 	}
 	function loadCss($file=null){
 		$x = "<link href='".$file."' rel='stylesheet' type='text/css'>";
 		$x .= "</link>";
-		$this->append($x,"head");
+		$this->add($x,"head");
 	}
 	function icon($file=null){
 		$x = "<link rel='shortcut icon' href='".$file."'>";
 
-		$this->append($x,"head");
+		$this->add($x,"head");
 	}
 	function div($content,$atrib=null){
 		$x = "<div";

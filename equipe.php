@@ -2,7 +2,7 @@
 
 include_once 'lib.php';
 
-$html = new HTML();
+$html = new BODY();
 
 include_once 'top.php';
 include_once 'bottom.php';
