@@ -12,6 +12,7 @@ class DBASE{
         $this->password = "FK8{rGXzVG";
         $this->database = "hexacore_my";
         $this->dsn = 'mysql:dbname='.$this->database.';host='.$this->host;
+        echo "execultou";
         try{
             $this->conn = new PDO($this->dns, $this->user, $this->password);
             die($this->conn);
