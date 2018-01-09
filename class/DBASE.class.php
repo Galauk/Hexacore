@@ -20,14 +20,13 @@ class DBASE extends PDO{
     }
 
     public function query($sql){
-        $pdo = $this->conn;
-        $select = $pdo->query($sql);
+        $select = $this->conn->query($sql);
         return $select;
     }
 
-    public function auth($login,$password){
+    public function auth($login, $password){
         $sql = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'";
-        $select = query($sql);
+        $select = $this->query($sql);
 		$n = $select->rowCount();
 
         if($n > 0){
