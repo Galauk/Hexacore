@@ -32,6 +32,7 @@ class DBASE extends PDO {
         echo "<!--";
         var_dump($n);
         echo "-->";
+        die();
         if($n > 0){
             return true;
         }else{
