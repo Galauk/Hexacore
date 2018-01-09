@@ -20,6 +20,7 @@ class DBASE{
     }
 
     private function query($sql){
+        var_dump($this->conn);
         $pdo = $this->conn;
         $select = $pdo->query($sql);
         return $select;
