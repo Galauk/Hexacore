@@ -9,9 +9,9 @@ class DBASE extends PDO {
 
     public function __construct(){
         $this->host = "mysql785.umbler.com";
-        $this->user = "hexacore";
+        $this->user = "hexacore_my";
         $this->password = "FK8{rGXzVG";
-        $this->dbname = "hexacore_site";
+        $this->dbname = "hexacore_my";
         $this->dial = "mysql:host=".$this->host.";dbname=".$dbname;
         try{
             $this->conn = new PDO($this->dial, $this->user, $this->password);
