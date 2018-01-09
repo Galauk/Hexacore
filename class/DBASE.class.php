@@ -30,7 +30,7 @@ class DBASE extends PDO {
         $res->execute();
         $n = $res->fetchColumn();
         echo "<!--";
-        var_dump($res);
+        var_dump($n);
         echo "-->";
         die();
         if($n > 0){
