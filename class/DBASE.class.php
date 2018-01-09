@@ -6,7 +6,7 @@ class DBASE{
         $user = "hexacore_my";
         $password = "FK8{rGXzVG";
         $database = "hexacore_my";
-        $dsn = "mysql:dbname=".$database.";host=".$host;
+        $dsn = "mysql:host=".$host.";dbname=".$database;
         try{
             $this->conn = new PDO($dns, $user, $password);
         }catch(PDOException $e){
