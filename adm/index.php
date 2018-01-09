@@ -24,7 +24,7 @@
 
 		$body->openDiv();
 		$body->add("
-?>
+
 <div align='center'>
 <br>
 <br>
@@ -35,16 +35,16 @@
 			<tr>
 				<td class='tp' colspan='30'>ADMINISTRADOR</td>
 			</tr>
-<?
-		if($msg):
-?>
+		");
+		if($msg){
+			$body->add("
 			<tr>
 				<td align='center' class='erro' colspan='30'><?=$msg?></td>
 			</tr>
-<?
-		endif;
-?>
-			<tr>
+			");
+		}
+		$body->add("
+		<tr>
 				<td>Login:</td>
 				<td><input class='x2' name='login' type='text'></td>
 			</tr>
@@ -56,7 +56,6 @@
 		</table>
 	</form>
 </div>
-<?php
 		");
 		$body->closeDiv();
 		$body->show();
