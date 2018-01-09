@@ -2,11 +2,11 @@
 class DBASE{
     public $conn = null;
     public function __construct(){
-        $host = "mysql857.umbler.com";
-        $user = "hexacore_my";
+        $host = "mysql785.umbler.com";
+        $user = "hexacore";
         $password = "FK8{rGXzVG";
-        $database = "hexacore_my";
-        $dsn = "mysql:dbname=".$database.";host=".$host;
+        $dbname = "hexacore_site";
+        $dsn = "mysql:dbname=".$dbname.";host=".$host;
         try{
             $this->conn = new PDO($dns, $user, $password);
         }catch(PDOException $e){
