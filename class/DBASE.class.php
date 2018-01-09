@@ -1,5 +1,5 @@
 <?php
-class DBASE{
+class DBASE extends PDO{
     public $host;
     public $user;
     public $password;
@@ -28,7 +28,7 @@ class DBASE{
 
     public function auth($login,$password){
         $sql = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'";
-        $select = $this->query($sql);
+        $select = query($sql);
 		$n = $select->rowCount();
 
         if($n > 0){
