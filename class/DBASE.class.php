@@ -18,8 +18,8 @@ class DBASE extends PDO {
     public function query($sql){
         $res = null;
         try{
-            $this->conn = new PDO($this->dial, $this->user, $this->password);
-            $res = $this->conn->query($sql);
+            $conn = new PDO($this->dial, $this->user, $this->password);
+            $res = $conn->query($sql);
 
             echo "<!--";
             var_dump($res);
