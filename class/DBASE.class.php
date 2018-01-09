@@ -22,6 +22,8 @@ class DBASE{
 
     private function query($sql){
         $pdo = $this->conn;
+        var_dump($pdo);
+        die();
         $select = $pdo->query($sql);
         return $select;
     }
@@ -29,7 +31,6 @@ class DBASE{
     public function auth($login,$password){
         $sql = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'";
         $select = $this->query($sql);
-        die(var_dump($select));
 		$n = $select->rowCount();
 
         if($n > 0){
