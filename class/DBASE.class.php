@@ -21,6 +21,7 @@ class DBASE{
     }
     public function auth($login,$password){
         $sql = "SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'";
+        die($sql);
         $select = $this->conn->query($sql);
 		$n = $select->rowCount();
 
