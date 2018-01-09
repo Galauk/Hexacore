@@ -17,8 +17,7 @@ class DBASE{
     private function query($sql){
         try{
             $this->conn = new PDO($this->dns,$this->user,$this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        }catch(Exception $e){
+        }catch(PDOException $e){
             $e->getMessage();
         }
         $pdo = $this->conn;

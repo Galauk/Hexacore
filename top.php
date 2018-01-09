@@ -3,7 +3,7 @@
 $html->title("..:: Hexacore ::..");
 $html->loadCss("css/bootstrap.min.css");
 $html->loadCss("css/css.css");
-$html->loadJava("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js");
+//$html->loadJava("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js");
 $html->loadJava("js/bootstrap.min.js");
 
 $menu = array(
@@ -12,7 +12,6 @@ $menu = array(
 	'projeto.php'=>'Projetos',
 	'contato.php'=>'Contato',
 );
-
 
 $top =
 	$html->openDiv(array('align'=>"center","class"=>"all")).
