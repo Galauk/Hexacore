@@ -1,5 +1,5 @@
 <?php
-class DBASE{
+class DBASE extends PDO{
     public $conn = null;
     public function __construct(){
         $host = "mysql785.umbler.com";
@@ -19,7 +19,7 @@ class DBASE{
     }
 
     public function auth($login, $password){
-        $n = $this->conn->exec("SELECT login, senha FROM admin WHERE login LIKE '$login' AND senha LIKE '$password'");
+        $n = $this->query("SELECT login, senha FROM admin WHERE login LIKE '".$login."' AND senha LIKE '".$password."'");
 
         if($n > 0){
             return true;
