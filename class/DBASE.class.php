@@ -14,6 +14,7 @@ class DBASE{
         $this->dsn = 'mysql:dbname='.$this->database.';host='.$this->host;
         try{
             $this->conn = new PDO($this->dns, $this->user, $this->password);
+            die($this->conn);
         }catch(PDOException $e){
             $e->getMessage();
         }
