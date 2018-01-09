@@ -20,7 +20,9 @@ class DBASE{
     }
 
     public function query($sql){
+        var_dump($sql);
         $query = $this->conn->prepare($sql);
+        die($query);
         return $query->execute();
     }
 
