@@ -14,7 +14,7 @@ class DBASE extends PDO {
         $this->dbname = "hexacore_my";
         $this->dial = "mysql:host=".$this->host.";dbname=".$dbname;
         try{
-            $conn = new PDO($this->dial, $this->user, $this->password);
+            $this->conn = new PDO($this->dial, $this->user, $this->password);
         }catch(PDOException $e){
             echo "Falha na conexao:".$e->getMessage();
         }
@@ -22,7 +22,7 @@ class DBASE extends PDO {
 
 
     public function auth($login, $password){
-        $stmt = $this->prepare("SELECT * FROM admin WHERE login LIKE '".$login."' AND senha LIKE '".$password."'");
+        $stmt = $this->conn->prepare("SELECT * FROM admin WHERE login LIKE '".$login."' AND senha LIKE '".$password."'");
         $stmt->execute();
         $n = $stmt->rowCount();
         if($n > 0){
