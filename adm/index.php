@@ -9,9 +9,7 @@
 	if($env){
 		$login = $_POST[login];
 		$senha = $_POST[senha];
-		$db->auth($login,$senha);
-		$value = $db->auth($login,$senha);
-		if($value){
+		if($db->auth($login,$senha)){
 			session_start();
 			$_SESSION[auten] = "1";
 			header('location:body.php');
