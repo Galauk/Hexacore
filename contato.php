@@ -13,7 +13,13 @@ if($_POST['nome']){
 		registrar no banco de dados
 		enviar e-mail para outros e-mails
 	*/
-	mail('angelo@hexacore.com.br', 'E-mail pelo site', 'O e-mail utilizado foi: '.$_POST['email'].' e a mensagem foi:'.$_POST['msg']);
+	mail(
+		'angelo@hexacore.com.br',
+		'E-mail pelo site',
+		'O nome utilizado foi '.$_POST['nome'].PHP_EOL.
+		'O e-mail utilizado foi: '.$_POST['email'].PHP_EOL.
+		'e a mensagem foi: '.$_POST['msg']
+	);
 	$envio = 'Seu e-mail foi enviado com sucesso.';
 }else{
 	$envio = '';
