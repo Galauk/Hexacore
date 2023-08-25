@@ -1,0 +1,55 @@
+<?
+	//Titulo da pagina
+	$titu = "ASSOCIADOS";
+	
+	//Tabela do Banco de Dados
+	$tabela = "assoc";
+	
+	//informações para listagem
+		//Titulo de apresentação das Variaveis
+		$titulo = array(
+		"Codigo",
+		"Categorias",
+		"Nome");
+		
+		//Variaveis
+		$campo = array(
+		"id",
+		"id_categ",
+		"nome");
+		
+		//Tipo da variavel
+		$tipo = array(
+		"titulo",
+		"seleção",
+		"titulo");
+	
+	//Informações para edição
+		//Titulo de apresentação das Variaveis
+		$titulo2 = array(
+		"Codigo",
+		"Categorias",
+		"Nome");
+		
+		//Variaveis
+		$campo2 = array(
+		"id",
+		"id_categ",
+		"nome");
+		
+		//Tipo da variavel
+		$tipo2 = array(
+		"titulo",
+		"seleção",
+		"titulo");
+		
+	//Informções extras
+		//Variavel de seleção
+		$sel = array(
+		"",
+		"nome",
+		"");
+	
+	//inclui arquivo biblia
+	include_once "BD.php";
+?>
