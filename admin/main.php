@@ -1,1 +1,0 @@
-<table cellpadding='0' cellspacing='0' width='725'>	<tr>		<td class='main'><b>PÁGINA INICIAL</b></td>	</tr>	<tr>		<td align='center' class='menu_bord'>			<br>			Texto			<br>&nbsp;		</td>	</tr></table>

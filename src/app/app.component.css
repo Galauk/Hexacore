@@ -1,0 +1,22 @@
+@import url('../assets/css/boostrap.min.css');
+
+.logo {
+  display: flex;
+  justify-content:center;
+
+  align-items:center;
+}
+
+
+
+.content {
+  display: flex;
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+.main {
+  margin-top: 50px;
+}
