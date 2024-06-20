@@ -1,0 +1,18 @@
+.equip img{
+	width: 200px;
+}
+
+.equipPic {
+	text-align: center;
+	width: 200px;
+	display: table-cell;
+}
+
+.equipName {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.equipText {
+	display: block;
+}
