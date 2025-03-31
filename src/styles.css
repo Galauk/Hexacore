@@ -21,8 +21,8 @@ div {
 	display: block;
 }
 
-.logo {
-	padding: 30px 0px;
+.logo img {
+height: 100px;	
 }
 
 .menu {

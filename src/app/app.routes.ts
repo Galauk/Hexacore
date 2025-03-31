@@ -6,10 +6,6 @@ import { ContatoComponent } from './pages/contato/contato.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 
 export const routes: Routes = [
-  {path:"",component:MainComponent },
-  {path:"equipe",component:EquipeComponent },
-  {path:"projeto",component:ProjetoComponent },
-  {path:"contato",component:ContatoComponent },
-  {path:"novo",component:PrincipalComponent },
-  {path:'**',redirectTo:''}
+  {path:"", component:PrincipalComponent},
+  {path:'**', redirectTo:''}
 ];
