@@ -1,13 +1,16 @@
 {
   "name": "hexacore",
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:hexacore": "node dist/hexacore/server/server.mjs"
+    "serve:ssr:hexacore": "node dist/hexacore/server/server.mjs",
+    "build:ssr": "ng build && ng run hexacore:server",
+    "prerender": "ng run hexacore:prerender"
   },
   "private": true,
   "dependencies": {
