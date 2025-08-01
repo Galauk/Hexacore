@@ -1,6 +1,9 @@
 [build]
   command = "npm run build:ssr && npm run prerender"
-  publish = "dist/hexacore/browser"
+  publish = "dist/hexacore"
+
+[build.environment]
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
