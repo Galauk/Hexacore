@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build:ssr && ng run hexacore:server"
+  command = "npm run build:ssr && npm run prerender"
   publish = "dist/hexacore/browser"
 
 [build.environment]
