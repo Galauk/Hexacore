@@ -4,7 +4,8 @@
     <img src="assets/images/logo.png" alt="Logo Hexacore">
   </div>
   <nav class="main-nav">
-    <ul>
+    <button class="menu-toggle" aria-label="Abrir menu" (click)="menuOpen = !menuOpen">&#9776;</button>
+    <ul [class.open]="menuOpen">
       <li><a href="">PRINCIPAL</a></li>
       <li><a href="#quem-somos">QUEM SOMOS</a></li>
       <li><a href="#projetos">PROJETOS</a></li>

@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
+  menuOpen = false;
   projects = [
     { image: 'assets/images/project1.jpg', title: 'HexaSys' },
     { image: 'assets/images/project2.jpg', title: 'Smart School' },
