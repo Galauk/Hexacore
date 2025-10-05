@@ -5,9 +5,9 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng build && ng run hexacore:server",
+    "build:ssr": "ng build --configuration production && ng run hexacore:server:production",
     "serve:ssr": "node dist/hexacore/server/main.js",
-    "prerender": "ng run hexacore:prerender"
+    "prerender": "ng run hexacore:prerender:production"
   },
   "private": true,
   "dependencies": {
