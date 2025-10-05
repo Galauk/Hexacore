@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build:ssr && npm run prerender"
-  publish = "dist/hexacore"
+  command = "npm run build:ssr && npm run hexacore:server"
+  publish = "dist/hexacore/browser"
 
 [build.environment]
   NODE_VERSION = "20"
