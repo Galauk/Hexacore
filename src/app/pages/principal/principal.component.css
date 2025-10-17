@@ -50,6 +50,7 @@
   bottom: 2rem;
   display: flex;
   gap: 0.5rem;
+  left: 48.5%;
 }
 
 .dot {
@@ -71,10 +72,10 @@
 }
 
 .btn-primary {
-  background: var(--primary-color);
+  background: #333;
   color: var(--white);
   padding: 0.75rem 2rem;
-  border: none;
+  border: 1px solid grey;
   border-radius: 25px;
   cursor: pointer;
   font-weight: 500;
@@ -142,13 +143,13 @@
 }
 
 .portfolio-nav a {
-  color: var(--text-color);
+  color: grey;
   text-decoration: none;
   font-weight: 500;
 }
 
 .portfolio-nav a.active {
-  color: var(--primary-color);
+  color: white;
 }
 
 .portfolio-grid {
@@ -159,9 +160,13 @@
   margin: 0 auto;
 }
 
+.portfolio-item {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
 .portfolio-item img {
-  width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -173,6 +178,14 @@
   gap: 1rem;
   margin-top: 2rem;
 }
+.portfolio-controls button {
+  background-color: black;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border: 1px solid grey;
+  color: white;
+}
+
 
 /* Contact Section */
 .contact {

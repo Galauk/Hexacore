@@ -12,12 +12,12 @@ import { RouterModule } from '@angular/router';
 export class PrincipalComponent implements OnInit {
   menuOpen = false;
   projects = [
-    { image: 'assets/images/project1.jpg', title: 'HexaSys' },
-    { image: 'assets/images/project2.jpg', title: 'Smart School' },
-    { image: 'assets/images/project3.jpg', title: 'Check Motors' },
-    { image: 'assets/images/project4.jpg', title: 'MyGyM' },
-    { image: 'assets/images/project5.jpg', title: 'SchoolLate' },
-    { image: 'assets/images/project6.jpg', title: 'MyPet' },
+    { image: 'assets/images/project1.png', title: 'HexaSys' },
+    { image: 'assets/images/project2.png', title: 'Smart School' },
+    { image: 'assets/images/project3.png', title: 'Check Motors' },
+    { image: 'assets/images/project4.png', title: 'MyGyM' },
+    { image: 'assets/images/project5.png', title: 'SchoolLate' },
+    { image: 'assets/images/project6.png', title: 'MyPet' },
   ];
 
   currentSlide = 0;
