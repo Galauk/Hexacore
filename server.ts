@@ -1,5 +1,8 @@
 import 'zone.js/node';
 import express from 'express';
+import compression from 'compression';
+import helmet from 'helmet';
+import fs from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { APP_BASE_HREF } from '@angular/common';
@@ -15,6 +18,9 @@ export function app(): express.Express {
   const browserDistFolder = resolve(__dirname, '../browser'); // pasta com build do frontend
   const indexHtml = join(browserDistFolder, 'index.html'); // HTML base do Angular
 
+  server.use(helmet());
+  server.use(compression());
+
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
@@ -26,8 +32,9 @@ export function app(): express.Express {
   // Todas as rotas normais usam Angular SSR
   server.get('*', async (req, res) => {
     try {
+      const document = fs.readFileSync(indexHtml, 'utf8');
       const html = await renderApplication(bootstrap, {
-        document: await import(indexHtml).then(m => m.default), // importa o HTML
+        document,
         url: req.url,
         platformProviders: [
           { provide: APP_BASE_HREF, useValue: req.baseUrl }
@@ -36,7 +43,7 @@ export function app(): express.Express {
       res.send(html);
     } catch (err) {
       console.error(err);
-      res.status(500).send(err);
+      res.status(500).send(String(err));
     }
   });
 
